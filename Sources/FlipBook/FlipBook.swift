@@ -15,6 +15,7 @@ import ReplayKit
 // MARK: - FlipBook -
 
 /// Class that records a view
+@objcMembers
 public final class FlipBook: NSObject {
     
     // MARK: - Types -
