@@ -96,7 +96,7 @@ public final class FlipBook: NSObject {
     ///   - compositionAnimation: optional closure for adding `AVVideoCompositionCoreAnimationTool` composition animations. Add `CALayer`s as sublayers to the passed in `CALayer`. Then trigger animations with a `beginTime` of `AVCoreAnimationBeginTimeAtZero`. *Reminder that `CALayer` origin for `AVVideoCompositionCoreAnimationTool` is lower left  for `UIKit` setting `isGeometryFlipped = true is suggested* **Default is `nil`**
     ///   - progress: optional closure that is called with a `CGFloat` representing the progress of video generation. `CGFloat` is in the range `(0.0 ... 1.0)`. `progress` is called from the main thread. **Default is `nil`**
     ///   - completion: closure that is called when the video has been created with the `URL` for the created video. `completion` will be called from the main thread
-    public func startRecording(_ view: View,
+    @objc public func startRecording(_ view: View,
                                compositionAnimation: ((CALayer) -> Void)? = nil,
                                progress: ((CGFloat) -> Void)? = nil,
                                completion: @escaping (Result<FlipBookAssetWriter.Asset, Error>) -> Void) {
